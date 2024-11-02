@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darkness Intensity Measurement</title>
+</head>
+<body>
+    <h1>Measure Darkness Intensity</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="image">Upload an Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+        <input type="submit" value="Submit">
+    </form>
+    {% if result %}
+        <h2>Measured Intensity: {{ result }}</h2>
+        <h3>{{ feedback }}</h3>
+    {% endif %}
+</body>
+</html>
